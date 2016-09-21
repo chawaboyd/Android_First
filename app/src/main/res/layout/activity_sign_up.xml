@@ -96,7 +96,8 @@
                         android:textColor="@color/bText"
                         android:textColorHint="@color/bText"
                         android:textStyle="bold"
-                        android:textColorHighlight="@color/bText" />
+                        android:textColorHighlight="@color/bText"
+                        android:nestedScrollingEnabled="false" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
