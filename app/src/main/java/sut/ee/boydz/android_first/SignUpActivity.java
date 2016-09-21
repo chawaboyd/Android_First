@@ -2,12 +2,18 @@ package sut.ee.boydz.android_first;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 
 public class SignUpActivity extends AppCompatActivity {
 
     //Explicit
-    private EditText nameEditText, addrEditText, phoneEditText, userEditText, passwordEditText;
+    private EditText nameEditText, addrEditText, phoneEditText,
+            userEditText, passwordEditText;
+    private String nameString,addressString, phoneString, userString,
+            passwordString,genderString, imageString;
+
+
 
 
     @Override
@@ -24,6 +30,15 @@ public class SignUpActivity extends AppCompatActivity {
 
     } // Main Method
 
+    public void clickSingUpSign(View view) {
 
+        // Get Value From Edit Text
+        nameString = nameEditText.getText().toString().trim();
+        addressString = addrEditText.getText().toString().trim();
+        phoneString = phoneEditText.getText().toString().trim();
+        userString = userEditText.getText().toString().trim();
+        passwordString = passwordEditText .getText().toString().trim();
+
+    } // clickSign
 
 } //Main Class
