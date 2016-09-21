@@ -2,6 +2,8 @@ package sut.ee.boydz.android_first;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
@@ -67,6 +69,15 @@ public class SignUpActivity extends AppCompatActivity {
             Log.d("SUTFriendV1", "imagePathString ==>" + imagePathString); //show path image
 
             //Setup ImageView
+            try {
+
+                Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver()
+                .openInputStream(uri));
+                imageView.setImageBitmap(bitmap); //set image show on screen
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
 
         }
