@@ -5,6 +5,8 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="aText">#eeeeee</color>
+    <color name="bText">#e7ff00</color>
+    <color name="gText">#ff4081</color>
 
     
 </resources>

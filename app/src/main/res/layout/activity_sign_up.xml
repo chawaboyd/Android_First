@@ -91,13 +91,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Male"
-                        android:id="@+id/radioButton" />
+                        android:id="@+id/radioButton"
+                        android:textSize="@dimen/h3"
+                        android:textColor="@color/bText"
+                        android:textColorHint="@color/bText"
+                        android:textStyle="bold"
+                        android:textColorHighlight="@color/bText" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Female"
-                        android:id="@+id/radioButton2" />
+                        android:id="@+id/radioButton2"
+                        android:textSize="@dimen/h3"
+                        android:textColor="@color/gText"
+                        android:textStyle="bold" />
                 </RadioGroup>
             </LinearLayout>
         </LinearLayout>
