@@ -4,14 +4,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    //Explicit
+    //Explicit ประกาศตัวแปร
     private EditText nameEditText, addrEditText, phoneEditText,
             userEditText, passwordEditText;
     private String nameString,addressString, phoneString, userString,
             passwordString,genderString, imageString;
+    private RadioButton maleRadioButton, femaleRadioButton;
 
 
 
@@ -27,6 +29,8 @@ public class SignUpActivity extends AppCompatActivity {
         phoneEditText = (EditText) findViewById(R.id.editText3);
         userEditText = (EditText) findViewById(R.id.editText4);
         passwordEditText = (EditText) findViewById(R.id.editText5);
+        maleRadioButton = (RadioButton) findViewById(R.id.radioButton);
+        femaleRadioButton = (RadioButton) findViewById(R.id.radioButton2);
 
     } // Main Method
 
@@ -44,7 +48,12 @@ public class SignUpActivity extends AppCompatActivity {
                 phoneString.equals("")|| userString.equals("")|| passwordString.equals("")) {
             //Have space
             MyAlet myAlet = new MyAlet(this, R.drawable.bird48,
-                    "Error", "please put your data"); //create instant
+                    "Error", "Please, put your data!"); //create instant
+            myAlet.myDialog();
+        } else if (!(maleRadioButton.isChecked()|| femaleRadioButton.isChecked())) {
+            //Non check Gender
+            MyAlet myAlet =new MyAlet(this, R.drawable.rat48,
+                    "Error", "Please, select Gender!");
             myAlet.myDialog();
         }
     } // clickSign
