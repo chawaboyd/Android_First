@@ -39,6 +39,14 @@ public class SignUpActivity extends AppCompatActivity {
         userString = userEditText.getText().toString().trim();
         passwordString = passwordEditText .getText().toString().trim();
 
+        //Check space
+        if (nameString.equals("")|| addressString.equals("")||
+                phoneString.equals("")|| userString.equals("")|| passwordString.equals("")) {
+            //Have space
+            MyAlet myAlet = new MyAlet(this, R.drawable.bird48,
+                    "Error", "please put your data"); //create instant
+            myAlet.myDialog();
+        }
     } // clickSign
 
 } //Main Class
